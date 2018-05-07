@@ -25,4 +25,13 @@ find_image(){
 	aws ec2 describe-images  --filters Name=name,Values=ubuntu/images/hvm-ssd/ubuntu*  --query 'Images[*].[ImageId,CreationDate]' --output text  | sort -k2 -r  | head -n1
 	# ami-415b7baa	2018-05-01T17:34:04.000Z
 }
+
+ec2_regions(){
+	aws ec2 describe-regions
+}
+
+change_region(){
+	aws configure set region us-east-2
+}
+
 $@
