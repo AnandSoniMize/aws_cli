@@ -7,7 +7,7 @@ createSecurityGroup(){
 }
 create_ec2(){
 	# https://docs.aws.amazon.com/cli/latest/userguide/cli-ec2-launch.html
-	aws ec2 run-instances --image-id ami-66c8fa03 --count 1 --instance-type t2.micro #--key-name MyKeyPair --security-groups my-sg
+	aws ec2 run-instances --image-id ami-66c8fa03 --count 1 --instance-type t2.micro --key-name ec2-keypair #--security-groups my-sg
 
 }
 configure_list(){
@@ -40,6 +40,10 @@ all_ec2_instances(){
 
 delete_instance(){
 	aws ec2 terminate-instances  --instance-id $1
+}
+
+create_key_pair(){
+	aws ec2 create-key-pair --key-name MyKeyPair | tee MyKeyPair.pem
 }
 
 $@
