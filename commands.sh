@@ -34,6 +34,10 @@ change_region(){
 	aws configure set region us-east-2
 }
 
+frankfurt(){
+	aws configure set region eu-central-1
+}
+
 all_ec2_instances(){
 	aws ec2 describe-instances --region us-east-2
 }

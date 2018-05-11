@@ -6,8 +6,8 @@ var client = {
   user: "adminuser",
   database: "database1",
   password: "TopSecret1",
-  port: 5339,
-  host: "mycluster.ckjlpf2bivsj.us-east-2.redshift.amazonaws.com",
+  port: 5439,
+  host: "mycluster.cpdvkneibipx.eu-central-1.redshift.amazonaws.com",
 };
 
 console.info("creating redshift connection with client", client);
