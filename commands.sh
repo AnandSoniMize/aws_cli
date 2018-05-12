@@ -50,4 +50,6 @@ create_key_pair(){
 	aws ec2 create-key-pair --key-name MyKeyPair | tee MyKeyPair.pem
 }
 
+
+
 $@

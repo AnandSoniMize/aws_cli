@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "babel-preset-latest": "^6.24.1"
+  },
+  "scripts": {
+    "start": "babel-node app.js"
+  },
+  "dependencies": {
+    "await-to-js": "^2.0.1",
+    "node-redshift": "^0.1.5",
+    "tracer": "^0.8.15"
+  }
+}
