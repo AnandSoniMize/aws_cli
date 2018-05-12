@@ -92,4 +92,7 @@ delete(){
 	aws kinesis delete-stream --stream-name myStream
 }
 
+streams_in_all_regions(){
+	../for_each_region.sh aws kinesis list-streams
+}
 $@
